@@ -1,3 +1,7 @@
+# Namen
+Pablo Trutnau
+Kim Becker
+
 # Forscher*innen Wikidata MAK Collection
 
 ---
