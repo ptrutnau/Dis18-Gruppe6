@@ -26,6 +26,7 @@ Die Idee ist, eine **automatisierte Pipeline** zu entwickeln, die auf Basis dies
 
 ## Erste Schritte
 
+<<<<<<< HEAD
 ### Ziel der ersten Phase:
 Bevor die eigentliche Pipeline gebaut wird, erfolgt ein **Testlauf mit einem einzelnen Eintrag**, um den Upload-Prozess mit `Pywikibot` zu verifizieren und zu dokumentieren.
 
@@ -81,3 +82,7 @@ Beispiel-DOI zum Testen aus der MAK Collection:
 - [ ] Erweiterung der Wikidata-Einträge um Autoren, ORCID, Themen
 - [ ] Sicherstellung von Duplikatprüfung (existiert DOI bereits in Wikidata?)
 - [ ] Automatisierte Dokumentation und Log-Ausgabe pro Upload
+=======
+Bevor eine automatisierte Pipeline erstellt wird, wird erstmal ein Testeintrag ins Wikidata erstellt.
+n öffentliches githup repo erstellt und ein Testeintrag gemacht
+>>>>>>> 91e62bc (Add script to push publications to Wikidata)

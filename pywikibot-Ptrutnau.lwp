@@ -1,0 +1,15 @@
+#LWP-Cookies-2.0
+Set-Cookie3: WMF-Last-Access="19-Jun-2025"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-07-21 12:00:00Z"; HttpOnly=None; version=0
+Set-Cookie3: NetworkProbeLimit="0.001"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-06-19 21:22:58Z"; SameSite=None; version=0
+Set-Cookie3: wikidatawikiSession=91i3pndj9gd4hkjqc958hrqqntukn5bt; path="/"; domain="www.wikidata.org"; path_spec; secure; discard; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: wikidatawikiUserID=7404715; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2026-06-19 20:23:11Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: wikidatawikiUserName=Ptrutnau; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2026-06-19 20:23:11Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: centralauth_User=Ptrutnau; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2026-06-19 20:23:11Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: centralauth_Token=b6f9f5190542ddc8062efb4de82db8af; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2026-06-19 20:23:11Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: centralauth_Session=b4988ddc3d82c6f378e6cbb585ad74e6; path="/"; domain="www.wikidata.org"; path_spec; secure; discard; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: loginnotify_prevlogins="2025-1m9fgv7-eufot55jg1j3v1n35ujrm6hhu5bbl27"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-12-16 20:23:11Z"; HttpOnly=None; version=0
+Set-Cookie3: cpPosIndex="2%401750364591%234b0f196b20fa6477e89c6136f71ef79e"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-06-19 20:23:21Z"; HttpOnly=None; version=0
+Set-Cookie3: UseDC=master; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-06-19 20:23:21Z"; HttpOnly=None; version=0
+Set-Cookie3: WMF-Last-Access-Global="19-Jun-2025"; path="/"; domain=".wikidata.org"; path_spec; domain_dot; secure; expires="2025-07-21 12:00:00Z"; HttpOnly=None; version=0
+Set-Cookie3: GeoIP="DE:NW:Bergkamen:51.62:7.64:v4"; path="/"; domain=".wikidata.org"; path_spec; domain_dot; secure; discard; version=0
+Set-Cookie3: WMF-Uniq=JmhTrvOBmw_uIV_yF501ygIXAAEBAFvdgVfQ9XAnaFMlZuQu7NmrO0YWiV_c4AUq; path="/"; domain=".wikidata.org"; path_spec; domain_dot; secure; expires="2026-06-19 00:00:00Z"; HttpOnly=None; SameSite=None; version=0
