@@ -8,7 +8,7 @@ site = pywikibot.Site("wikidata", "wikidata")
 repo = site.data_repository()
 
 # Metadaten laden
-with open("data/mak_metadata.json", "r", encoding="utf-8") as f:
+with open("data/mak_metadata_with_orcid.json", "r", encoding="utf-8") as f:
     publications = json.load(f)
 
 # Bereits verarbeitete DOIs laden
@@ -116,7 +116,7 @@ for pub in publications:
 with open("data/processed_dois.txt") as f:
     done = len(f.readlines())
 
-with open("data/mak_metadata.json", encoding="utf-8") as f:
+with open("data/mak_metadata_with_orcid.json", encoding="utf-8") as f:
     total = len(json.load(f))
 
 print(f"\n📊 Fortschritt: {done} von {total} DOIs verarbeitet ({round(done/total*100, 2)}%)\n")
