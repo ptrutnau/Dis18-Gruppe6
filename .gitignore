@@ -32,3 +32,4 @@ Thumbs.db
 *.csv
 *.json
 data/processed_dois.txt
+!data/mak_metadata_with_orcid.json
