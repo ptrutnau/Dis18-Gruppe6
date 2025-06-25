@@ -1,0 +1,34 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Pywikibot
+pywikibot-*.lwp
+user-config.py
+throttle.ctrl
+apicache/
+pywikibot-wikidata/
+
+# Logs und temporäre Dateien
+*.log
+*.tmp
+*.bak
+
+# IDE/Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System-Dateien
+.DS_Store
+Thumbs.db
+
+# Output / Ergebnisse (optional, falls du CSVs oder JSONs nicht versionieren willst)
+*.csv
+*.json
+data/processed_dois.txt
