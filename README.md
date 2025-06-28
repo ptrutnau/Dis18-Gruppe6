@@ -1,68 +1,98 @@
-# Researchers Wikidata MAK Collection
+ Researchers Wikidata MAK Collection
 
 ## 👥 Authors  
-### Pablo Trutnau  
-### Kim Becker
+**Pablo Trutnau**  
+**Kim Becker**
 
 ---
 
 ## 🎯 Project Goal
 
-The aim of this project is the **automated integration of publications from the MAK Collection** into **Wikidata**.  
-The following metadata is added in a structured way:
+This project aims to **automatically integrate publication data from the MAK Collection** into **Wikidata**.  
+It enriches the data with metadata and links researchers to their publications using ORCID.
 
-- Title of the publication
-- DOI
-- Year of publication
-- Authors (linked via ORCID → `P50`, or as plain text → `P2093`)
-- Full text URL
-- Optionally: subject or topic classification
+Main metadata stored in Wikidata includes:
+- Title of the publication (`P1476`)
+- DOI (`P356`)
+- Year of publication (`P577`)
+- Authors via ORCID → `P50` (linked items)
+- Authors without ORCID → `P2093` (plain text string)
+- Full text URL (`P953`)
+- Optionally: subject / topic classification
 
-The foundation is a reliable JSON file containing metadata, enriched with ORCID information and, if needed, external sources such as the [DataCite API](https://api.datacite.org/).
+We use a structured JSON file (`mak_metadata_with_orcid.json`) enriched with ORCID data and additional external metadata (e.g. via [DataCite API](https://api.datacite.org/)).
 
 ---
 
-## 📁 Project Structure & Scripts
+## 📁 Project Structure
 
-### `push_publications_to_wikidata.py`  
-Creates or updates Wikidata entries for MAK publications using the `mak_metadata_with_orcid.json` file.
+├── Scripts/
+│ ├── Analyse_Daten.ipynb
+│ ├── extract_datacite.py
+│ ├── mak_doi_metadata_fetcher.ipynb
+│ ├── orcid_ids.py
+│ ├── push_publications_to_wikidata.py
+│ ├── test_wikidata_upload.py
+│ └── test_wikidata_upload_20.py
+├── data/
+│ ├── mak_metadata.json
+│ ├── mak_metadata_with_orcid.json
+│ ├── processed_dois.txt
+│ └── ...
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── user-config.py
 
-Main features:
-- Adds DOI (`P356`), title (`P1476`), year (`P577`), URL (`P953`)
-- Links authors via ORCID (`P50`), if available
-- Otherwise: stores name as string (`P2093`)
-- Supports `UPDATE_ONLY` mode for enriching existing entries
-- Progress tracking through `processed_dois.txt`
+## 🧪 Scripts Overview
+
+### `push_publications_to_wikidata.py`
+Main script for uploading publications to Wikidata using the enriched JSON metadata.
+
+**Features:**
+- Adds DOI, title, publication date, full text URL
+- Links authors via ORCID (`P50`), or falls back to name (`P2093`)
+- Skips entries if `UPDATE_ONLY = True` is set
+- Avoids duplicates using `processed_dois.txt`
 
 ---
 
 ### `test_wikidata_upload.py`  
-A minimal example script that manually creates a single Wikidata entry for testing purposes.  
-Used to verify the `Pywikibot` setup and basic property usage.
+Basic example script to create a single publication manually.  
+Used for Pywikibot testing and debugging.
 
 ---
 
 ### `test_wikidata_upload_20.py`  
-A modernized test script for creating Wikidata entries using the current project structure.  
-Uploads entries with the main fields: DOI, title, year, and URL.
+Modernized test version of the script above.  
+Works with current structure and automates more fields.
 
 ---
 
 ### `orcid_ids.py`  
-Utility script for retrieving missing ORCID IDs:
-- Filters entries without ORCID
-- Supports manual research or automated completion
+Script to help complete missing ORCID IDs.
+
+**Usage:**
+- Extracts authors without ORCID from the JSON
+- Helps with manual or automated ORCID lookup
 
 ---
 
 ### `extract_datacite.py`  
-Queries DOI metadata using the [DataCite REST API](https://api.datacite.org/).  
-Fetches metadata such as:
-- Title
-- Authors
-- Year of publication
-- Optional: license information  
-Can be used for metadata completion or quality control.
+Queries [DataCite](https://api.datacite.org/) for publication metadata using DOI.  
+Returns metadata like title, authors, publication year, abstract, etc.  
+Useful for enriching the base dataset.
+
+---
+
+### `Analyse_Daten.ipynb`  
+Jupyter notebook for analyzing the original MAK metadata.  
+Example use cases:
+- Check how many entries have ORCID
+- Detect duplicates or inconsistencies
+- Visualize temporal distribution or completeness
+
+---
 
 ---
 
