@@ -1,88 +1,93 @@
-# Namen
-Pablo Trutnau <br>
-Kim Becker
+# Researchers Wikidata MAK Collection
 
-# Forscher*innen Wikidata MAK Collection
+## 👥 Authors  
+### Pablo Trutnau  
+### Kim Becker
 
 ---
 
-## 🎯 Ziel des Projekts
+## 🎯 Project Goal
 
-Das Ziel dieses Projekts ist es, Publikationsdaten aus der **MAK Collection** systematisch in **Wikidata** zu integrieren.  
-Durch die Nutzung vorhandener DOI-Verknüpfungen (Wiley-DOIs und MAK-DOIs bzw. FRL-DOIs) sollen relevante Metadaten wie:
+The aim of this project is the **automated integration of publications from the MAK Collection** into **Wikidata**.  
+The following metadata is added in a structured way:
 
-- Titel der Publikation
+- Title of the publication
 - DOI
-- Veröffentlichungsjahr
-- Autoren (inkl. ORCID, sofern verfügbar)
-- Volltext-URL
-- ggf. Fachgebiet/Themen (Subject)
+- Year of publication
+- Authors (linked via ORCID → `P50`, or as plain text → `P2093`)
+- Full text URL
+- Optionally: subject or topic classification
 
-strukturiert im **Wikidata Knowledge Graph** gespeichert werden.
-
-Die Idee ist, eine **automatisierte Pipeline** zu entwickeln, die auf Basis dieser Daten zuverlässige und reproduzierbare Wikidata-Einträge generiert. Grundlage sind dabei öffentlich verfügbare Schnittstellen wie die [DataCite API](https://api.datacite.org/).
+The foundation is a reliable JSON file containing metadata, enriched with ORCID information and, if needed, external sources such as the [DataCite API](https://api.datacite.org/).
 
 ---
 
-## Erste Schritte
+## 📁 Project Structure & Scripts
 
-<<<<<<< HEAD
-### Ziel der ersten Phase:
-Bevor die eigentliche Pipeline gebaut wird, erfolgt ein **Testlauf mit einem einzelnen Eintrag**, um den Upload-Prozess mit `Pywikibot` zu verifizieren und zu dokumentieren.
+### `push_publications_to_wikidata.py`  
+Creates or updates Wikidata entries for MAK publications using the `mak_metadata_with_orcid.json` file.
 
----
-
-## Überblick über die enthaltenen Skripte
-
-### `test_wikidata_upload.py`
-
-Dieses Skript erstellt **einen neuen Eintrag in Wikidata** basierend auf manuell festgelegten Metadaten zu einer Publikation aus der MAK Collection.
-
-Es enthält:
-- Verbindung zu Wikidata mit `pywikibot`
-- Manuelles Setzen der folgenden Eigenschaften:
-  - `P1476` – Titel der Publikation
-  - `P356` – DOI
-  - `P577` – Veröffentlichungsdatum
-  - `P953` – URL zur Volltextversion (FRL)
-
-Das Skript demonstriert den vollständigen Ablauf vom Aufbau einer Wikidata-Verbindung bis zur Erstellung eines neuen Items.
+Main features:
+- Adds DOI (`P356`), title (`P1476`), year (`P577`), URL (`P953`)
+- Links authors via ORCID (`P50`), if available
+- Otherwise: stores name as string (`P2093`)
+- Supports `UPDATE_ONLY` mode for enriching existing entries
+- Progress tracking through `processed_dois.txt`
 
 ---
 
-### `fetch_metadata_from_datacite.py` *(optional/vorbereitet)*
-
-Dieses zweite Skript (bzw. Codeblock) dient zur **Abfrage von Metadaten** zu einer DOI über die DataCite API.
-
-Es ermöglicht die automatische Extraktion von:
-- Titel
-- Autoren
-- Jahr
-- Abstract
-- Lizenzinformationen
-- und mehr
-
-Diese Daten können im nächsten Schritt zur automatisierten Erstellung von Wikidata-Items verwendet werden.
+### `test_wikidata_upload.py`  
+A minimal example script that manually creates a single Wikidata entry for testing purposes.  
+Used to verify the `Pywikibot` setup and basic property usage.
 
 ---
 
-## Beispielhafte Datenquelle
+### `test_wikidata_upload_20.py`  
+A modernized test script for creating Wikidata entries using the current project structure.  
+Uploads entries with the main fields: DOI, title, year, and URL.
 
-Beispiel-DOI zum Testen aus der MAK Collection:
+---
+
+### `orcid_ids.py`  
+Utility script for retrieving missing ORCID IDs:
+- Filters entries without ORCID
+- Supports manual research or automated completion
+
+---
+
+### `extract_datacite.py`  
+Queries DOI metadata using the [DataCite REST API](https://api.datacite.org/).  
+Fetches metadata such as:
+- Title
+- Authors
+- Year of publication
+- Optional: license information  
+Can be used for metadata completion or quality control.
+
+---
+
+## 📚 Example Source DOI
 
 - DOI: `10.4126/FRL01-006453569`
-- Titel: *2,6-Diisopropylanilin*
-- Volltext: https://repository.publisso.de/resource/frl:6453569
+- Title: *2,6-Diisopropylanilin*
+- Full text: https://repository.publisso.de/resource/frl:6453569
 
 ---
 
-## Nächste Schritte
+## 🛠️ Requirements
 
-- [ ] Automatische Verarbeitung mehrerer DOIs aus der Excel-Datei (`data/`)
-- [ ] Erweiterung der Wikidata-Einträge um Autoren, ORCID, Themen
-- [ ] Sicherstellung von Duplikatprüfung (existiert DOI bereits in Wikidata?)
-- [ ] Automatisierte Dokumentation und Log-Ausgabe pro Upload
-=======
-Bevor eine automatisierte Pipeline erstellt wird, wird erstmal ein Testeintrag ins Wikidata erstellt.
-n öffentliches githup repo erstellt und ein Testeintrag gemacht
->>>>>>> 91e62bc (Add script to push publications to Wikidata)
+- Python 3.8+
+- Dependencies listed in `requirements.txt`
+- Configuration files:
+  - `user-config.py` (for Pywikibot)
+  - Optional: API credentials for external data sources
+
+---
+
+## 💻 Using the Project on Another Machine
+
+You can copy the entire project folder to a USB stick and continue working on another machine.  
+Keep in mind:
+- The `.git` structure is preserved (invisible in Finder, but visible in terminal using `ls -a`)
+- You can continue using `git pull`, `git push`, etc.
+- Ensure `Pywikibot` is installed and properly configured
