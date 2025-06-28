@@ -25,24 +25,26 @@ We use a structured JSON file (`mak_metadata_with_orcid.json`) enriched with ORC
 ---
 
 ## 📁 Project Structure
-
+```
 ├── Scripts/
-│ ├── Analyse_Daten.ipynb
-│ ├── extract_datacite.py
-│ ├── mak_doi_metadata_fetcher.ipynb
-│ ├── orcid_ids.py
-│ ├── push_publications_to_wikidata.py
-│ ├── test_wikidata_upload.py
-│ └── test_wikidata_upload_20.py
+│   ├── Analyse_Daten.ipynb
+│   ├── extract_datacite.py
+│   ├── mak_doi_metadata_fetcher.ipynb
+│   ├── orcid_ids.py
+│   ├── push_publications_to_wikidata.py
+│   ├── test_wikidata_upload.py
+│   └── test_wikidata_upload_20.py
 ├── data/
-│ ├── mak_metadata.json
-│ ├── mak_metadata_with_orcid.json
-│ ├── processed_dois.txt
-│ └── ...
+│   ├── mak_metadata.json
+│   ├── mak_metadata_with_orcid.json
+│   ├── processed_dois.txt
+│   └── ...
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
 └── user-config.py
+```
+
 
 ## 🧪 Scripts Overview
 
