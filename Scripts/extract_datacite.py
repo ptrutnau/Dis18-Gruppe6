@@ -6,8 +6,8 @@ import openpyxl
 
 
 # Pfade
-input_file = "./data/2023-11-17_mapping_makDoi_frlDoi.xlsx"
-output_file = "./data/mak_metadata.json"
+input_file = "../data/2023-11-17_mapping_makDoi_frlDoi.xlsx"
+output_file = "../data/mak_metadata.json"
 
 # Excel einlesen
 df = pd.read_excel(input_file)
