@@ -54,7 +54,6 @@ Main script for uploading publications to Wikidata using the enriched JSON metad
 **Features:**
 - Adds DOI, title, publication date, full text URL
 - Links authors via ORCID (`P50`), or falls back to name (`P2093`)
-- Skips entries if `UPDATE_ONLY = True` is set
 - Avoids duplicates using `processed_dois.txt`
 
 ---
@@ -67,12 +66,12 @@ Used for Pywikibot testing and debugging.
 
 ### `test_wikidata_upload_20.py`  
 Modernized test version of the script above.  
-Works with current structure and automates more fields.
+Creates 20 random publications
 
 ---
 
 ### `orcid_ids.py`  
-Script to help complete missing ORCID IDs.
+Script to help complete missing ORCID IDs for authors.
 
 **Usage:**
 - Extracts authors without ORCID from the JSON
