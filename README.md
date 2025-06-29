@@ -8,19 +8,55 @@
 
 ## 🎯 Project Goal
 
-This project aims to **automatically integrate publication data from the MAK Collection** into **Wikidata**.  
-It enriches the data with metadata and links researchers to their publications using ORCID.
+The goal of this project is the **systematic enrichment and integration of scientific publications from the MAK Collection into Wikidata**.<br>
+The MAK Collection, a curated set of toxicological and occupational health-related publications, is maintained in a structured repository, often identified through **Wiley or FRL DOIs**.  
 
-Main metadata stored in Wikidata includes:
-- Title of the publication (`P1476`)
-- DOI (`P356`)
-- Year of publication (`P577`)
-- Authors via ORCID → `P50` (linked items)
-- Authors without ORCID → `P2093` (plain text string)
-- Full text URL (`P953`)
-- Optionally: subject / topic classification
+The key aim is to **transform these raw metadata records into linked open data** in Wikidata, making the authorship, publication details, and digital identifiers **machine-readable, searchable, and citable**.
 
-We use a structured JSON file (`mak_metadata_with_orcid.json`) enriched with ORCID data and additional external metadata (e.g. via [DataCite API](https://api.datacite.org/)).
+This includes:
+
+- Enhancing the data with **ORCID identifiers** (when available) to uniquely link authors  
+- Avoiding duplicate or unlinked authors by **resolving and linking existing Wikidata profiles**  
+- Automatically creating **new entries in Wikidata** when missing  
+- Cleaning and standardizing the data before integration  
+
+---
+
+## 🔄 Data Pipeline Overview
+
+The structured integration of the MAK Collection into Wikidata follows this multi-step pipeline:
+
+1. **📥 Raw Data Collection**
+   - Source: `2023-11-17_mapping_makDoi_frlDoi.xlsx`
+   - Contains base metadata (MAK DOIs, FRL DOIs)
+  
+2. **🌐 Metadata Completion & Conversion to json**
+   - Script: `extract_datacite.py`
+   - Uses [DataCite API](https://api.datacite.org/) to fetch:
+     - Title
+     - Authors
+     - Publication year
+     - License info
+     - Abstracts (optional)    
+
+3. **🧠 ORCID Enrichment**
+   - Script: `orcid_ids.py`
+   - Adds missing ORCID IDs based on author names
+   - Produces: `mak_metadata_with_orcid.json`
+  
+5. **🧪 Testing**
+   - Scripts:
+     - `test_wikidata_upload.py`
+     - `test_wikidata_upload_20.py`
+   - Used to verify that uploads and bot configuration (e.g. `pywikibot`) work correctly before bulk runs.
+
+6. **📤 Wikidata Upload**
+   - Script: `push_publications_to_wikidata.py`
+   - Uploads structured data to Wikidata:
+     - Adds `P1476`, `P356`, `P577`, `P953`
+     - Authors via `P50` (if ORCID exists) or `P2093` (fallback)
+   - Tracks progress in `processed_dois.txt`
+   - Optional `UPDATE_ONLY` mode to avoid new entries
 
 ---
 
