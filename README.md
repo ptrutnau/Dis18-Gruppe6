@@ -113,12 +113,3 @@ Example use cases:
   - `user-config.py` (for Pywikibot)
   - Optional: API credentials for external data sources
 
----
-
-## 💻 Using the Project on Another Machine
-
-You can copy the entire project folder to a USB stick and continue working on another machine.  
-Keep in mind:
-- The `.git` structure is preserved (invisible in Finder, but visible in terminal using `ls -a`)
-- You can continue using `git pull`, `git push`, etc.
-- Ensure `Pywikibot` is installed and properly configured
