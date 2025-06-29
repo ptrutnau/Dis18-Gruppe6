@@ -4,7 +4,7 @@ import pywikibot
 from pywikibot import pagegenerators
 
 # === KONFIGURATION ===
-DATA_FILE = "data/mak_metadata_with_orcid.json"  # Datei mit ORCID-Daten
+DATA_FILE = "..data/mak_metadata_with_orcid.json"  # Datei mit ORCID-Daten
 NUM_ENTRIES = 20                                 # Anzahl der Testeinträge
 
 # === Wikidata-Verbindung aufbauen ===
