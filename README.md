@@ -61,14 +61,22 @@ The structured integration of the MAK Collection into Wikidata follows this mult
 
 ![grafik](https://github.com/user-attachments/assets/59a954aa-c9f4-4a54-90ed-a9f523690282)
 
-  
-5. **🧪 Testing**
+4. **📊 Analysis
+   - script: `Analyse_Daten.ipynb`
+   - little analysis `mak_metadata_with_orcid.json`
+
+   *Findings*:
+   ![grafik](https://github.com/user-attachments/assets/c863752b-4011-4208-bf2a-cc30549d6bb4)
+
+
+   
+6. **🧪 Testing**
    - Scripts:
      - `test_wikidata_upload.py`
      - `test_wikidata_upload_20.py`
    - Used to verify that uploads and bot configuration (e.g. `pywikibot`) work correctly before bulk runs.
 
-6. **📤 Wikidata Upload**
+7. **📤 Wikidata Upload**
    - Script: `push_publications_to_wikidata.py`
    - Uploads structured data from `mak_metadata_with_orcid.json` to Wikidata:
      - Adds `P1476`, `P356`, `P577`, `P953`
@@ -140,7 +148,7 @@ Useful for enriching the base dataset.
 ---
 
 ### `Analyse_Daten.ipynb`  
-Jupyter notebook for analyzing the original MAK metadata.  
+Jupyter notebook for analyzing `mak_metadata_with_orcid.json`.  
 Example use cases:
 - Check how many entries have ORCID
 - Detect duplicates or inconsistencies
