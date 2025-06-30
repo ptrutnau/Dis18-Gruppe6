@@ -1,8 +1,8 @@
  Researchers Wikidata MAK Collection
 
 ## 👥 Authors  
-**Pablo Trutnau**  
-**Kim Becker**
+**Pablo Trutnau** 11142860
+**Kim Becker** 11137944
 
 ---
 
