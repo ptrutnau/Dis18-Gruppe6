@@ -30,7 +30,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
    - Source: `2023-11-17_mapping_makDoi_frlDoi.xlsx`
    - Contains base metadata (MAK DOIs, FRL DOIs)
   
-    ![grafik](https://github.com/user-attachments/assets/c36d8d11-3557-430a-ba58-5ae91997334f)
+ ![grafik](https://github.com/user-attachments/assets/c36d8d11-3557-430a-ba58-5ae91997334f)
 
   
 2. **🌐 Metadata Completion & Conversion to json**
@@ -40,12 +40,19 @@ The structured integration of the MAK Collection into Wikidata follows this mult
      - Authors
      - Publication year
      - License info
-     - Abstracts (optional)    
+     - Abstracts (optional)
+  - Returns data in json format: `mak_metadata.json`
+
+![grafik](https://github.com/user-attachments/assets/69697874-5b59-44b9-b524-b0ab67a8b629)
+
 
 3. **🧠 ORCID Enrichment**
    - Script: `orcid_ids.py`
    - Adds missing ORCID IDs based on author names
    - Produces: `mak_metadata_with_orcid.json`
+
+![grafik](https://github.com/user-attachments/assets/75d5adf7-813b-457a-a8b0-389e3e2d2c6e)
+
   
 5. **🧪 Testing**
    - Scripts:
