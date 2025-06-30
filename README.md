@@ -70,11 +70,10 @@ The structured integration of the MAK Collection into Wikidata follows this mult
 
 6. **📤 Wikidata Upload**
    - Script: `push_publications_to_wikidata.py`
-   - Uploads structured data to Wikidata:
+   - Uploads structured data from `mak_metadata_with_orcid.json` to Wikidata:
      - Adds `P1476`, `P356`, `P577`, `P953`
-     - Authors via `P50` (if ORCID exists) or `P2093` (fallback)
+     - Authors via `P50` (if ORCID exists) or `P2093` (as string)
    - Tracks progress in `processed_dois.txt`
-   - Optional `UPDATE_ONLY` mode to avoid new entries
 
 ---
 
