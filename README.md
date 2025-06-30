@@ -68,7 +68,6 @@ The structured integration of the MAK Collection into Wikidata follows this mult
    *Findings*:
    ![grafik](https://github.com/user-attachments/assets/c863752b-4011-4208-bf2a-cc30549d6bb4)
 
-
    
 6. **🧪 Testing**
    - Scripts:
@@ -82,6 +81,11 @@ The structured integration of the MAK Collection into Wikidata follows this mult
      - Adds `P1476`, `P356`, `P577`, `P953`
      - Authors via `P50` (if ORCID exists) or `P2093` (as string)
    - Tracks progress in `processed_dois.txt`
+
+ *Random DOI's*
+10.4126/FRL01-006456173 -> [url to wikidata](https://www.wikidata.org/wiki/Q134997925)
+10.4126/FRL01-006457805 -> [url to wikidata](https://www.wikidata.org/wiki/Q134999826)
+10.4126/FRL01-006455910 -> [urls to wikidata](https://www.wikidata.org/wiki/Q134997669)
 
 ---
 
