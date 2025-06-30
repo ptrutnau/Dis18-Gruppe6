@@ -154,9 +154,9 @@ Useful for enriching the base dataset.
 ### `Analyse_Daten.ipynb`  
 Jupyter notebook for analyzing `mak_metadata_with_orcid.json`.  
 Example use cases:
+- Checks amoumt of authors and publications
 - Check how many entries have ORCID
 - Detect duplicates or inconsistencies
-- Visualize temporal distribution or completeness
 
 ---
 
