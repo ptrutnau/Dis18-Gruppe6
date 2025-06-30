@@ -162,14 +162,6 @@ Example use cases:
 
 ---
 
-## 📚 Example Source DOI
-
-- DOI: `10.4126/FRL01-006453569`
-- Title: *2,6-Diisopropylanilin*
-- Full text: https://repository.publisso.de/resource/frl:6453569
-
----
-
 ## 🛠️ Requirements
 
 - Python 3.8+
