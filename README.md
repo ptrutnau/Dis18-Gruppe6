@@ -32,6 +32,14 @@ The structured integration of the MAK Collection into Wikidata follows this mult
   
  ![grafik](https://github.com/user-attachments/assets/c36d8d11-3557-430a-ba58-5ae91997334f)
 
+ | Column       | Description                                                                                         |
+|--------------|-----------------------------------------------------------------------------------------------------|
+| **`wiley_doi`**  | DOI of the publication on the **Wiley platform**. Typically starts with `10.1002/...`. Refers to the version published by the academic publisher. |
+| **`frl_doi`**    | DOI of the same publication in the **FRL repository** (MAK Collection). Starts with `10.4126/FRL01...`. Used for the Open Access reference. |
+| **`frl_uri`**    | **Direct URL** to the publication in the Publisso FRL repository. This resolves the `frl_doi` to the accessible full-text publication. |
+| **`frl_id`**     | **Internal ID** of the publication within the FRL system, derived from the DOI. Used as a unique identifier. |
+
+
   
 2. **🌐 Metadata Completion & Conversion to json**
    - Script: `extract_datacite.py`
