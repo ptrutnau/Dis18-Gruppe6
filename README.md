@@ -48,7 +48,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
      - Authors
      - Publication year
      - License info
-     - Abstracts (optional)
+     - publisoo url
   - Returns data in json format: `mak_metadata.json`
 
 ![grafik](https://github.com/user-attachments/assets/69697874-5b59-44b9-b524-b0ab67a8b629)
