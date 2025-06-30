@@ -51,7 +51,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
    - Adds missing ORCID IDs based on author names
    - Produces: `mak_metadata_with_orcid.json`
 
-![grafik](https://github.com/user-attachments/assets/75d5adf7-813b-457a-a8b0-389e3e2d2c6e)
+![grafik](https://github.com/user-attachments/assets/59a954aa-c9f4-4a54-90ed-a9f523690282)
 
   
 5. **🧪 Testing**
