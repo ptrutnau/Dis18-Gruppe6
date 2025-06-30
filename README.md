@@ -30,6 +30,9 @@ The structured integration of the MAK Collection into Wikidata follows this mult
    - Source: `2023-11-17_mapping_makDoi_frlDoi.xlsx`
    - Contains base metadata (MAK DOIs, FRL DOIs)
   
+    ![grafik](https://github.com/user-attachments/assets/c36d8d11-3557-430a-ba58-5ae91997334f)
+
+  
 2. **🌐 Metadata Completion & Conversion to json**
    - Script: `extract_datacite.py`
    - Uses [DataCite API](https://api.datacite.org/) to fetch:
