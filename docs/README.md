@@ -45,7 +45,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
    - Script: `extract_datacite.py` <br>
    DataCite is an international non-profit organization that specializes in assigning DOIs (Digital Object Identifiers) for research data and scholarly publications.
 
-   - Uses [DataCite API](https://api.datacite.org/) to fetch:
+   - Uses [DataCite REST API](https://api.datacite.org/) to fetch:
      - Title
      - Authors
      - Publication year
@@ -58,7 +58,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
 
 3. **🧠 ORCID Enrichment**
    - Script: `orcid_ids.py`
-   - Adds missing ORCID IDs based on author names
+   - Adds missing ORCID IDs based on author names via Orcid REST API
    - Produces: `mak_metadata_with_orcid.json`
 
 ![grafik](https://github.com/user-attachments/assets/59a954aa-c9f4-4a54-90ed-a9f523690282)
