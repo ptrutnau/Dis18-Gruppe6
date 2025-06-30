@@ -3,7 +3,7 @@ nav:
   - Startseite: index.md
   - Installation: installation.md
   - Daten: Data.md
-  - Code: Code.md
+  - Code: code.md
   - Workflow: Workflow.md
 theme:
   name: material
