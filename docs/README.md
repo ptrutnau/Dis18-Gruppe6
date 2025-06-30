@@ -42,7 +42,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
 
   
 2. **🌐 Metadata Completion & Conversion to json**
-   - Script: `extract_datacite.py`
+   - Script: `extract_datacite.py` <br>
    DataCite is an international non-profit organization that specializes in assigning DOIs (Digital Object Identifiers) for research data and scholarly publications.
 
    - Uses [DataCite API](https://api.datacite.org/) to fetch:
