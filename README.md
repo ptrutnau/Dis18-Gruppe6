@@ -82,7 +82,7 @@ The structured integration of the MAK Collection into Wikidata follows this mult
      - Authors via `P50` (if ORCID exists) or `P2093` (as string)
    - Tracks progress in `processed_dois.txt`
 
- *Random DOI's*
+ *Random DOI's* <br>
 10.4126/FRL01-006456173 -> [url to wikidata](https://www.wikidata.org/wiki/Q134997925) <br>
 10.4126/FRL01-006457805 -> [url to wikidata](https://www.wikidata.org/wiki/Q134999826) <br>
 10.4126/FRL01-006455910 -> [urls to wikidata](https://www.wikidata.org/wiki/Q134997669)
