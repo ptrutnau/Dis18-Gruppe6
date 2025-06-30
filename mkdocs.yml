@@ -1,0 +1,10 @@
+site_name: Forscher*innen in Wikidata - MAK
+nav:
+  - Startseite: index.md
+  - Installation: installation.md
+  - Daten: data.md
+  - Code: code.md
+  - Workflow: workflow.md
+  - Team: team.md
+theme:
+  name: material
