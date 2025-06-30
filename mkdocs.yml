@@ -1,7 +1,7 @@
 site_name: Forscher*innen in Wikidata - MAK
 nav:
   - Startseite: index.md
-  - ReadMe: readme.md
+  - ReadMe: README.md
   - Installation: installation.md
   - Daten: Data.md
   - Code: code.md
