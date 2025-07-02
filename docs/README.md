@@ -26,6 +26,9 @@ This includes:
 
 The structured integration of the MAK Collection into Wikidata follows this multi-step pipeline:
 
+![grafik](https://github.com/user-attachments/assets/443b2882-e0ff-4530-b516-1f8255abdb8b)
+
+
 1. **📥 Raw Data Collection**
    - Source: `2023-11-17_mapping_makDoi_frlDoi.xlsx`
    - Contains base metadata (MAK DOIs, FRL DOIs)
