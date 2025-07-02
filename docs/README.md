@@ -175,5 +175,4 @@ Example use cases:
 - Dependencies listed in `requirements.txt`
 - Configuration files:
   - `user-config.py` (for Pywikibot)
-  - Optional: API credentials for external data sources
 
